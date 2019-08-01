@@ -1,0 +1,37 @@
+Request URL: http://b00.tw/f95ne?l=zh-CN
+Request Method: GET
+Status Code: 200 OK
+Remote Address: 104.27.129.254:80
+Referrer Policy: no-referrer-when-downgrade
+
+HTTP/1.1 200 OK
+Date: Mon, 24 Jun 2019 12:59:28 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Status: 200 OK
+Cache-Control: max-age=0, private, must-revalidate
+Vary: Accept-Encoding
+X-XSS-Protection: 1; mode=block
+X-Request-Id: df090be9-4583-451f-a639-6fb6bb2abb61
+X-Frame-Options: SAMEORIGIN
+X-Runtime: 0.019023
+X-Content-Type-Options: nosniff
+Set-Cookie: _boo_tw_session=amptWlNTdjdOaTRkN01JWmtYWTQ1UHQrYlBITzd1eitadHVxdUZiY2Q0emFQUTBEZmJCUzdBM2FMQ2tlcUx4RTR6WnczYlVuSnRJOWVVYkgrMkRpL0R3d0I0Y00xRWVWOFJXNnplRkxLZVRDaDQ5TXorbTJFUWJWNG8xUVBJQ0h0TFBKK1pURzluYXRvS3prUDZTNVBnPT0tLTQwYTlrRDRrMFVkUE1vNEx0YTlyOGc9PQ%3D%3D--41075ca8c2e698a892722547f132eff24e6ac867; path=/; HttpOnly
+X-Powered-By: Phusion Passenger
+Server: cloudflare
+CF-RAY: 4ebee10a99c09605-SJC
+Content-Encoding: gzip
+
+
+GET /f95ne?l=zh-CN HTTP/1.1
+Host: b00.tw
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+Referer: http://boo.tw/f95ne
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: __cfduid=dfc3e002da98ee1216f9dde07a6ee29b81561212929; _ga=GA1.2.97201942.1561212937; _gid=GA1.2.2106211745.1561377278; _boo_tw_session=TlVsK1FqbHMwZGFyMVlPV2tNdnZUcEpESjJFY2NkR1Z1YTVtREFBRlNyRXkzV3c0dmh5NWd3UzArQUJpc3JuY3dzcVEwak90S1J6c1Vhbm5kdm1MeTZUWGI3RGxVdUpReUROSmhLYVpLVllQVGczSnFUWE1oL0F1b3lYWElOU2JKYVpReHVHb1o5UWJCWFZkbGdIVU5BPT0tLTRCUDE3dkpvOGdrczZ0VU5kdDE3Z1E9PQ%3D%3D--7c7d4666df722a0115eb74eac91f2f3bea99652d
+l=zh-CN
