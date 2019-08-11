@@ -1,6 +1,28 @@
-import re
-str = '''<td style="WORD-WRAP: break-word" bgcolor="#fdfddf"><a href="thunder://QUFmdHA6Ly95Z2R5ODp5Z2R5OEB5ZzQ1LmR5ZHl0dC5uZXQ6ODQ2OS8lRTklOTglQjMlRTUlODUlODklRTclOTQlQjUlRTUlQkQlQjF3d3cueWdkeTguY29tLiVFNiU4MSVCNiVFNCVCQSVCQSVFNCVCQyVBMC5CRC43MjBwLiVFOSU5RiVBOSVFOCVBRiVBRCVFNCVCOCVBRCVFNSVBRCU5Ny5ta3ZaWg==" target="_self" thunderpid="" thundertype="" thunderrestitle="ftp://ygdy8:ygdy8@yg45.dydytt.net:8469/阳光电影www.ygdy8.com.恶人传.BD.720p.韩语中字.mkv" onclick="return OnDownloadClick_Simple(this,2);" oncontextmenu="ThunderNetwork_SetHref(this)" zyrjhqkt="thunder://QUFmdHA6Ly95Z2R5ODp5Z2R5OEB5ZzQ1LmR5ZHl0dC5uZXQ6ODQ2OS8lRTklOTglQjMlRTUlODUlODklRTclOTQlQjUlRTUlQkQlQjF3d3cueWdkeTguY29tLiVFNiU4MSVCNiVFNCVCQSVCQSVFNCVCQyVBMC5CRC43MjBwLiVFOSU5RiVBOSVFOCVBRiVBRCVFNCVCOCVBRCVFNSVBRCU5Ny5ta3ZaWg==">ftp://ygdy8:ygdy8@yg45.dydytt.net:8469/阳光电影www.ygdy8.com.恶人传.BD.720p.韩语中字.mkv</a></td>'''
 
-pattern = re.compile(r'ftp+://[^s]*(avi|mpeg|rmvb|mp4|mov|flv|wmv|mkv)')
-url = pattern.search(str)
-print(url.group(0))
+import requests
+import re
+import os
+import psutil
+import time
+from bs4 import BeautifulSoup
+def get_page(url):
+    '''
+    获取电影列表
+    最新电影：https://www.ygdy8.net/html/gndy/dyzz/list_23_2.html
+    一页25部电影，5分钟*25 1小时差不多，+30分钟缓冲时间
+    '''
+    headers = {'user-agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36'}
+    html = requests.get(url,headers=headers)
+    try:
+        html.encoding = 'gb18030'
+        bsObj = BeautifulSoup(html.text,'lxml')
+        url_list = bsObj.find_all('div > ul >a',{'class':'co_content2'})
+        # url_list[1].pop(0)
+        # url_list[1].pop(1)
+        # print(len(url_list[1]))
+        print(url_list)
+        # for i in url_list[1].select('div > ul'):
+            # print(i)
+    except ArithmeticError as e:
+        return None
+get_page('https://www.dytt8.net/index.htm')
